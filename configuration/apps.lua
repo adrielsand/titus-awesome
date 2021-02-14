@@ -12,22 +12,25 @@ return {
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'terminator',
-    screenshot = 'flameshot screen -p ~/Pictures',
+    screenshot = 'flameshot full -p ~/Pictures',
     region_screenshot = 'flameshot gui -p ~/Pictures',
-    delayed_screenshot = 'flameshot screen -p ~/Pictures -d 5000',
-    browser = 'brave',
+    delayed_screenshot = 'flameshot full -p ~/Pictures -d 5000',
+    browser = 'firefox',
     editor = 'gedit', -- gui text editor
-    social = 'discord',
+    social = 'telegram-desktop',
     game = rofi_command,
     files = 'nautilus',
-    music = rofi_command 
+    video = 'vlc',
+    music = 'audacity',
+    appmng = 'terminator -e htop',
+    vmapp = 'virtualbox' 
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
     'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/picom.conf',
     'nm-applet --indicator', -- wifi
     'pnmixer', -- shows an audiocontrol applet in systray when installed.
-    --'blueberry-tray', -- Bluetooth tray icon
+    'blueberry-tray', -- Bluetooth tray icon
     'numlockx on', -- enable numlock
     '/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
     'xfce4-power-manager', -- Power manager
