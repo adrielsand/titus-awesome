@@ -168,6 +168,14 @@ local globalKeys =
     {description = 'Increase master width factor', group = 'layout'}
   ),
   awful.key(
+    {modkey},
+    'h',
+    function()
+      awful.spawn(apps.default.appmng)
+    end,
+    {description = 'Open htop', group = 'launcher'}
+  ),
+  awful.key(
     {altkey, 'Shift'},
     'Left',
     function()
